@@ -6,7 +6,7 @@ function move(element) {
         element.style.bottom = bottom + 'px'
     }
 
-    function moveWithArrowKeys(left, bottom){
+    function moveWithArrowKeys(left, bottom){ //you need to pass the callback function here
     let direction = null;
     let x = left;
     let y = bottom;
