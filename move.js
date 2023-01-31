@@ -6,7 +6,7 @@ function move(element) {
         element.style.bottom = bottom + 'px'
     }
    
-    function moveWithArrowKeys(left, bottom){
+    function moveWithArrowKeys(left, bottom, callback){ //you will need to pass the callback function to the moveWithArrowKeys
         let direction = null;
         let x = left;
         let y = bottom;
@@ -48,10 +48,12 @@ function move(element) {
             if(e.key === 'ArrowDown'){
                 direction = 'south'
             }
+            callback(direction) //calling the function and passing the directions to be able to change the image
         })
         
         document.addEventListener('keyup', function(e){
             direction = null
+            callback(direction) //calling the function again and passing the directions after it is set to null
         })
     }
         
