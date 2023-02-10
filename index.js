@@ -65,6 +65,7 @@ move(character).WithArrowKeys(100, 250, handleDirectionChange)
 // PROBLEM FIXED!!!
 
 // ******************************************************************
+/* Commenting out this part of the code as it is not needed anymore
 
 //3. chante the character's directions with arrow keys using DOM event  -->keydown
 document.addEventListener('keydown', function(e){
@@ -93,6 +94,7 @@ document.addEventListener('keydown', function(e){
 document.addEventListener ('keyup', function(e){
     direction = null
 })
+*/
 
 // 4. Refactoring our code
 // if we decided the player can switch charact and control some other image wtih the arrow key. Need to duplicate event listeners and the setIntercal callback. will need to refactor code into -->move function (allow to use it on any image)
