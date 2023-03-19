@@ -67,8 +67,12 @@ function moveWithArrowKeys(left, bottom, callback){
     let direction = null;
     let x = left;
     let y = bottom;
+    
+    element.style.left = x + 'px'
+    element.style.bottom = y+ 'px'
+}
 
-    document.addEventListener('keydown', function(e){
+    document.addEventListener('keydown', function(e) {
         if(e.repeat) return;
     
         if(e.key === 'ArrowLeft'){
@@ -85,8 +89,10 @@ function moveWithArrowKeys(left, bottom, callback){
         }
         callback(direction)
     })
-    
+
     document.addEventListener('keyup', function(e){
         direction = null
         callback(direction)
     })
+   
+     
