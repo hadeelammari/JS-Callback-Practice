@@ -1,6 +1,6 @@
 for (let height = 0; height < window.innerHeight / 100; height++) {
    for (let width = 0; width < window.innerWidth / 100; width++) {
-      newImage("assets/sky.png", 0 + width * 100, 0 + height * 100);
+      move(newImage("assets/sky.png")).to( 0 + width * 100, 0 + height * 100)
    }
 }
 
